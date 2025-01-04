@@ -1,0 +1,8 @@
+# inherit GSI key
+$(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
+
+# A/B update
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
+
+# first lunch Android API
+PRODUCT_SHIPPING_API_LEVEL := 31
