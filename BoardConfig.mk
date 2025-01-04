@@ -1,5 +1,8 @@
 DEVICE_PATH := device/legion/halo
 
+# A/B
+AB_OTA_UPDATER := true
+
 # architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv9-a
