@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<remote name="KNTO" fetch="http://github.com/KNTO-GionYuki" revision="development"/>
+	<project name="bliss_device_legion_halo" path="device/legion/halo" remote="KNTO"/>
+</manifest>
