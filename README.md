@@ -5,3 +5,6 @@ prebuilt kernelsu version android13-5.10.218_2024-08<br>
 device spec<br>
 SOC SM8475 (Snapdragon 8+ Gen1)<br>
 RAM 12GB<br>
+<br>
+building on Manjaro Linux need packages.<br>
+rsync zip unzip
