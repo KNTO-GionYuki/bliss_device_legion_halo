@@ -3,12 +3,15 @@ DEVICE_PATH := device/legion/halo
 # A/B
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS +=	\
+	boot		\
+	recovery	\
 	odm		\
 	product		\
 	system		\
 	system_ext	\
 	vendor		\
-	vendor_dlkm
+	vendor_dlkm	\
+	vendor_boot
 
 # architecture
 TARGET_ARCH := arm64
@@ -19,6 +22,10 @@ TARGET_CPU_ABI2 := arm64-v9a
 # bootloader
 TARGET_BOOTLOADER_BOARD_NAME := taro
 TARGET_NO_BOOTLOADER := true
+
+#platform infomation
+BOARD_USES_QCOM_HARDWARE := true
+TARGET_BOOTLOADER_BOARD_NAME := taro
 
 #Display
 TARGET_SCREEN_DENSITY := 480
