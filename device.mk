@@ -7,3 +7,8 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # first lunch Android API
 PRODUCT_SHIPPING_API_LEVEL := 32
+
+# soong build system config
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += \
+    $(LOCAL_PATH)
