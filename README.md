@@ -15,4 +15,6 @@ create full super partition image.<br>
 mka superimage_empty<br>
 create empty super partition iamge.<br>
 <br>
-# coder chage to KNTO-GionYuki<br>
+# mount Stock ROM images
+mount -o ro -t ext4 vendor.img mnt
+# coder KNTO-GionYuki<br>
