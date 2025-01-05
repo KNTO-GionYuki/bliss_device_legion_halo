@@ -3,7 +3,10 @@ DEVICE_PATH := device/legion/halo
 # A/B
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS +=	\
+	odm		\
+	product		\
 	system		\
+	system_ext	\
 	vendor		\
 	vendor_dlkm
 
@@ -32,7 +35,10 @@ BOARD_SUPER_PARTITION_SIZE := 0x280000000
 BOARD_SUPER_PARTITION_GROUPS := super
 BOARD_SUPER_SIZE := 0x140000000
 BOARD_SUPER_PARTITION_LIST +=		\
+	odm				\
+	product				\
 	system				\
+	system_ext			\
 	vendor				\
 	vendor_dlkm
 
