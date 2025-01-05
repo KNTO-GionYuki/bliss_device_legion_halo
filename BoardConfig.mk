@@ -43,6 +43,7 @@ BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_IMAGE_NAME := Image
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/ksu/Image
+BOARD_RAMDISK_USE_LZ4 := true
 
 # partition controll
 BOARD_FLASH_BLOCK_SIZE := 0x4000
