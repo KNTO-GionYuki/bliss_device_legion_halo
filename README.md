@@ -7,4 +7,5 @@ SOC SM8475 (Snapdragon 8+ Gen1)<br>
 RAM 12GB<br>
 <br>
 building on Manjaro Linux need packages.<br>
-rsync zip unzip
+rsync zip unzip<br>
+coder chage to KNTO-GionYuki<br>
