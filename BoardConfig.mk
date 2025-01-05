@@ -2,6 +2,10 @@ DEVICE_PATH := device/legion/halo
 
 # A/B
 AB_OTA_UPDATER := true
+AB_OTA_PARTITIONS +=	\
+	system		\
+	vendor		\
+	vendor_dlkm
 
 # architecture
 TARGET_ARCH := arm64
@@ -19,3 +23,5 @@ TARGET_SCREEN_DENSITY := 480
 # android kernel
 BOARD_KERNEL_IMAGE_NAME := Image
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/ksu/Image
+
+# partition controll
