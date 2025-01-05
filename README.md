@@ -8,10 +8,11 @@ RAM 12GB<br>
 <br>
 building on Manjaro Linux need packages.<br>
 rsync zip unzip inetutils<br>
-coder chage to KNTO-GionYuki<br>
 <br>
 # mka variants
 mka superimage<br>
 create full super partition image.<br>
 mka superimage_empty<br>
 create empty super partition iamge.<br>
+<br>
+# coder chage to KNTO-GionYuki<br>
