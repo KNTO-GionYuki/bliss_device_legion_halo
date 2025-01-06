@@ -9,7 +9,7 @@
 set -e
 
 DEVICE=halo
-VENDOR=lenovo
+VENDOR=legion
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
