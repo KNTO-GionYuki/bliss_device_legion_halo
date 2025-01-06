@@ -26,6 +26,9 @@ BOARD_INCLUDE_RECOVERY_RAMDISK_IN_VENDOR_BOOT := true
 # vendor
 TARGET_COPY_OUT_VENDOR := vendor
 
+# product
+TARGET_COPY_OUT_PRODUCT := product
+
 # architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv9-a
