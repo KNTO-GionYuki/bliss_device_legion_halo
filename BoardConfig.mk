@@ -29,6 +29,9 @@ TARGET_COPY_OUT_VENDOR := vendor
 # product
 TARGET_COPY_OUT_PRODUCT := product
 
+# system_ext
+TARGET_COPY_OUT_SYSTEM_EXT := system_ext
+
 # architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv9-a
