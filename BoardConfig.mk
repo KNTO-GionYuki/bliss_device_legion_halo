@@ -32,6 +32,9 @@ TARGET_COPY_OUT_PRODUCT := product
 # system_ext
 TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 
+# odm
+TARGET_COPY_OUT_ODM := odm
+
 # architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv9-a
