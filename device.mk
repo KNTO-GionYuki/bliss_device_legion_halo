@@ -18,4 +18,5 @@ PRODUCT_SOONG_NAMESPACES += \
     PRODUCT_PACKAGES +=		\
     vendor.qti.hardware.AGMIPC@1.0-service	\
     vendor.qti.hardware.AGMIPC@1.0-impl		\
-    libagm
+    libagm					\
+    libar-pal
