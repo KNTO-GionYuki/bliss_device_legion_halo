@@ -1,3 +1,5 @@
+# include halo vendor blobs
+$(call inherit-product, vendor/legion/halo-vendor.mk)
 # inherit GSI key
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
