@@ -15,13 +15,16 @@ AB_OTA_PARTITIONS +=	\
 	vbmeta		\
 	vbmeta_system
 
-#recovery
+# recovery
 TARGET_NO_RECOVERY := false
 BOARD_USES_RECOVERY_AS_BOOT := false
 
-#vendor_boot
+# vendor_boot
 BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
 BOARD_INCLUDE_RECOVERY_RAMDISK_IN_VENDOR_BOOT := true
+
+# vendor
+TARGET_COPY_OUT_VENDOR := true
 
 # architecture
 TARGET_ARCH := arm64
