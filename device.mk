@@ -10,6 +10,9 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # first lunch Android API
 PRODUCT_SHIPPING_API_LEVEL := 32
 
+#SEAndroid
+$(call inherit-product, device/qcom/sepolicy/SEPolicy.mk)
+
 # soong build system config
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
