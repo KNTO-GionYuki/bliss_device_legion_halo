@@ -14,9 +14,3 @@ PRODUCT_SHIPPING_API_LEVEL := 32
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
-
-    PRODUCT_PACKAGES +=		\
-    vendor.qti.hardware.AGMIPC@1.0-service	\
-    vendor.qti.hardware.AGMIPC@1.0-impl		\
-    libagm					\
-    libar-pal
