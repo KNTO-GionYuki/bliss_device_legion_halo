@@ -12,7 +12,6 @@ PRODUCT_SHIPPING_API_LEVEL := 32
 
 #SEAndroid
 $(call inherit-product, device/qcom/sepolicy/SEPolicy.mk)
-$(call inherit-product, device/bliss/sepolicy/qcom/sepolicy.mk)
 
 # soong build system config
 # Soong namespaces
