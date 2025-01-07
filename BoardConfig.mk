@@ -93,6 +93,9 @@ TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_ODM := odm
 TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
 
+#SEAndroid
+include device/qcom/sepolicy_vndr/SEPolicy.mk
+
 ##metadata partition
 BOARD_USES_METADATA_PARTITION := true
 
