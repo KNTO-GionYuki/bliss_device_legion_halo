@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
+	<!--KNTOリポジトリ定義-->
 	<remote name="KNTO" fetch="http://github.com/KNTO-GionYuki" revision="development"/>
+	<!--デバイスツリー-->
 	<project name="bliss_device_legion_halo" path="device/legion/halo" remote="KNTO"/>
+	<!--ベンダーツリー-->
+	<project name="bliss_vendor_legion_halo" path="vendor/legion/halo" remote="KNTO"/>
 </manifest>
