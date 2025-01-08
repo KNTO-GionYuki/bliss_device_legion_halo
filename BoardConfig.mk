@@ -94,8 +94,9 @@ TARGET_COPY_OUT_ODM := odm
 TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
 
 #SEAndroid
-TARGET_USES_PREBUILT_VENDOR_SEPOLICY := true
+TARGET_USES_PREBUILT_VENDOR_SEPOLICY := false
 include device/qcom/sepolicy_vndr/SEPolicy.mk
+SELINUX_IGNORE_NEVERALLOWS := false
 
 ##metadata partition
 BOARD_USES_METADATA_PARTITION := true
