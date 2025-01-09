@@ -19,8 +19,8 @@ create empty super partition iamge.<br>
 mount -o ro -t ext4 vendor.img mnt
 <br>
 # build kernel choice feature function
-STOCK_KERNEL_ZUI_VER := From Stock ROM version(ex. 14.0.697)
-KERNEL_VARIANT := ksu or above same STOCK_KERNEL_ZUI_VER value
+STOCK_KERNEL_ZUI_VER := From Stock ROM version(ex. 14.0.697)<br>
+KERNEL_VARIANT := ksu or above same STOCK_KERNEL_ZUI_VER value<br>
 
 # coder KNTO-GionYuki<br>
 
