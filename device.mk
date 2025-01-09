@@ -14,3 +14,7 @@ PRODUCT_SHIPPING_API_LEVEL := 32
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
+
+# fastbootd
+PRODUCT_PACKAGES +=	\
+	fastbootd
