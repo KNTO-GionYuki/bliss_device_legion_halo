@@ -1,5 +1,8 @@
 DEVICE_PATH := device/legion/halo
 
+#OTA assert
+TARGET_OTA_ASSERT_DEVICE := halo
+
 # A/B
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS +=	\
