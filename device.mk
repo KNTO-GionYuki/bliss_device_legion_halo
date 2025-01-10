@@ -5,6 +5,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
 # A/B update
 #$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # first lunch Android API
@@ -18,3 +19,8 @@ PRODUCT_SOONG_NAMESPACES += \
 # fastbootd
 PRODUCT_PACKAGES +=	\
 	fastbootd
+
+#Initialization
+PRODUCT_PACKAGES += 	\
+	fstab.default	\
+	fstab.default.vendor_ramdisk
