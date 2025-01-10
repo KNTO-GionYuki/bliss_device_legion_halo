@@ -24,3 +24,16 @@ PRODUCT_PACKAGES +=	\
 PRODUCT_PACKAGES += 	\
 	fstab.default	\
 	fstab.default.vendor_ramdisk
+
+PRODUCT_COPY_FILES +=	\
+	$(LOCAL_PATH)/prebuilt/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
+
+#Generic ramdisk
+$(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
+
+
+#Bootcontrol
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.2-impl-qti \
+    android.hardware.boot@1.2-impl-qti.recovery \
+    android.hardware.boot@1.2-service
