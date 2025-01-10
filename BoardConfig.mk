@@ -76,7 +76,7 @@ BOARD_RAMDISK_USE_XZ := true
 # android kernel modules
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(wildcard $(DEVICE_PATH)/prebuilt/$(STOCK_KERNEL_ZUI_VER)/lib/modules/*.ko)
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(DEVICE_PATH)/prebuilt/$(STOCK_KERNEL_ZUI_VER)/lib/modules/modules.load
-BOARD_VENDOR_RAMDISK_KERNEL_MODULES_BLOCKLIST_FILE := $(DEVICE_PATH)/prebuilt/$(STOCK_KERNEL_ZUI_VER)/lib/modules/modules.blacklist
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES_BLOCKLIST_FILE := $(DEVICE_PATH)/prebuilt/$(STOCK_KERNEL_ZUI_VER)/lib/modules/modules.blocklist
 
 # partition controll
 BOARD_FLASH_BLOCK_SIZE := 0x4000
