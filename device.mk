@@ -16,6 +16,11 @@ PRODUCT_SHIPPING_API_LEVEL := 32
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.2-impl \
+    android.hardware.boot@1.2-impl.recovery \
+    android.hardware.boot@1.2-service
+
 # fastbootd
 PRODUCT_PACKAGES +=	\
 	fastbootd
