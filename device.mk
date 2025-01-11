@@ -44,4 +44,4 @@ PRODUCT_PACKAGES +=					\
 	android.hardware.health-service.qti_recovery
 
 PRODUCT_PACKAGES +=	\
-	init.qcom.recovery.rc
+	init.recovery.qcom.rc
