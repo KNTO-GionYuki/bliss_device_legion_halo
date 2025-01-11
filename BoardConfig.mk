@@ -85,10 +85,10 @@ TARGET_NEEDS_DTBOIMAGE := true
 
 # android kernel modules
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(wildcard $(DEVICE_PATH)/prebuilt/$(STOCK_KERNEL_ZUI_VER)/lib/modules/*.ko)
-BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(DEVICE_PATH)/prebuilt/$(STOCK_KERNEL_ZUI_VER)/lib/modules/modules.load
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell $(DEVICE_PATH)/prebuilt/$(STOCK_KERNEL_ZUI_VER)/lib/modules/modules.load) )
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_BLOCKLIST_FILE := $(DEVICE_PATH)/prebuilt/$(STOCK_KERNEL_ZUI_VER)/lib/modules/modules.blocklist
-BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(DEVICE_PATH)/prebuilt/$(STOCK_KERNEL_ZUI_VER)/lib/modules/modules.load.recovery
-BOOT_KERNEL_MODULES := $(DEVICE_PATH)/prebuilt/$(STOCK_KERNEL_ZUI_VER)/lib/modules/modules.load
+BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell $(DEVICE_PATH)/prebuilt/$(STOCK_KERNEL_ZUI_VER)/lib/modules/modules.load.recovery))
+BOOT_KERNEL_MODULES := $(strip $(shell $(DEVICE_PATH)/prebuilt/$(STOCK_KERNEL_ZUI_VER)/lib/modules/modules.load) )
 
 # partition controll
 BOARD_FLASH_BLOCK_SIZE := 0x4000
