@@ -26,7 +26,8 @@ PRODUCT_PACKAGES += 	\
 	fstab.default.vendor_ramdisk
 
 PRODUCT_COPY_FILES +=	\
-	$(LOCAL_PATH)/prebuilt/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
+	$(LOCAL_PATH)/prebuilt/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom			\
+	$(LOCAL_PATH)/prebuilt/etc/init.qcom.recovery.rc:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/init.qcom.recovery.rc
 
 #Generic ramdisk
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
