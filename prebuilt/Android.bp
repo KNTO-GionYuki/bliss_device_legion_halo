@@ -5,9 +5,9 @@ prebuilt_etc {
     vendor_ramdisk_available: true,
 }
 
-prebuilt_etc{
+prebuilt_etc {
     name: "init.qcom.recovery.rc",
-    src: "etc/init.qcom.recovery.rc"
+    src: "etc/init.qcom.recovery.rc",
     sub_di: "init",
     vendor: true,
 }
