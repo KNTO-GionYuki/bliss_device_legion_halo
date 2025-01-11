@@ -8,6 +8,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# APEX
+$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+
 # first lunch Android API
 PRODUCT_SHIPPING_API_LEVEL := 32
 
