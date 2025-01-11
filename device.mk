@@ -58,7 +58,7 @@ PRODUCT_PACKAGES +=	\
 
 
 ##init 1st vendor_ramdisk
-PRODUCT_PACKAGES +=			\
+#PRODUCT_PACKAGES +=			\
     linker.vendor_ramdisk		\
     shell_and_utilities_vendor_ramdisk	\
     adbd.vendor_ramdisk			\
