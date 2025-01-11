@@ -54,3 +54,12 @@ PRODUCT_PACKAGES +=					\
 
 PRODUCT_PACKAGES +=	\
 	init.recovery.qcom.rc
+
+
+##init 1st vendor_ramdisk
+PRODUCT_PACKAGES +=			\
+    linker.vendor_ramdisk		\
+    shell_and_utilities_vendor_ramdisk	\
+    adbd.vendor_ramdisk			\
+    resize2fs.vendor_ramdisk		\
+    tune2fs.vendor_ramdisk
