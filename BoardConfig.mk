@@ -36,7 +36,6 @@ TARGET_IS_64_BIT := true
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv9-a
 TARGET_CPU_ABI := arm64-v8a
-TARGET_CPU_ABI2 := arm64-v9a
 TARGET_CPU_VARIANT := generic
 TARGET_CPU_VARIANT_RUNTIME := kryo300
 
@@ -58,25 +57,24 @@ BOARD_USES_QCOM_MERGE_DTBS_SCRIPT := true
 TARGET_NO_KERNEL := false
 BOARD_BOOT_HEADER_VERSION := 4
 STOCK_KERNEL_ZUI_VER := 14.0.697
-KERNEL_VARIANT := ksu
+KERNEL_VARIANT := 14.0.697
 BOARD_BOOTIMG_HEADER_VERSION := 4
 TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/$(STOCK_KERNEL_ZUI_VER)/dtb
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
-BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive	\
+#BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive	\
 stack_depot_disable=on kasan.stacktrace=off kvm-arm.mode=protected cgroup_disable=pressure cgroup.memory=nokmem console=ttyMSM0,115200n8 loglevel=6 kpti=0 log_buf_len=256K kernel.panic_on_rcu_stall=1 swiotlb=noforce loop.max_part=7 cgroup.memory=nokmem,nosocket pcie_ports=compat msm_rtb.filter=0x237 allow_mismatched_32bit_el0 kasan=off rcupdate.rcu_expedited=1 rcu_nocbs=0-7 ftrace_dump_on_oops pstore.compress=none cpufreq.default_governor=performance can.stats_timer=0 fsa4480_i2c.async_probe=1 slub_debug=- disable_dma32=on video=vfb:640x400,memsize=3072000 bootconfig buildvariant=user  msm_drm.dsi_display0=qcom,mdss_dsi_nova_nt37701a_dsc_cmd: rootwait ro init=/init
 
 
-BOARD_KERNEL_CMDLINE +=	\
+BOARD_BOOTCONFIG +=					\
+	androidboot.selinux=permissive			\
 	androidboot.hardware=qcom			\
-	androidboot.boot_devices=soc/1d84000.ufshc	\
-	androidboot.usbcontroller=a600000.dwc3		\
-	androidboot.bootdevice = "1d84000.ufshc"	\
-	androidboot.dtbo_idx = "14"			\
-	androidboot.dtb_idx = "1"
+	androidboot.memcg=1				\
+	androidboot.usbcontroller=a600000.dwc3
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_IMAGE_NAME := Image
+BOARD_USES_GENERIC_KERNEL_IMAGE := true
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/$(KERNEL_VARIANT)/Image
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/$(STOCK_KERNEL_ZUI_VER)/dtbo.img
 BOARD_RAMDISK_USE_LZ4 := true
@@ -120,6 +118,8 @@ BOARD_SYSTEM_EXTIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_VENDOR_DLKMIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := ext4
+TARGET_USERIMAGES_USE_EXT4 := true
+TARGET_USERIMAGES_USE_F2FS := true
 
 # partition copy out
 TARGET_COPY_OUT_VENDOR := vendor
@@ -139,10 +139,10 @@ BOARD_USES_METADATA_PARTITION := true
 #AVB
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
-BOARD_AVB_RECOVERY_KEY_PATH := external/avb/test/data/testkey_rsa8192.pem
-BOARD_AVB_RECOVERY_ALGORITHM := SHA256_RSA8192
-BOARD_AVB_RECOVERY_ROLLBACK_INDEX := 1
-BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
+BOARD_AVB_RECOVERY_KEY_PATH := external/avb/test/data/testkey_rsa4096.pem
+BOARD_AVB_RECOVERY_ALGORITHM := SHA256_RSA4096
+BOARD_AVB_RECOVERY_ROLLBACK_INDEX := q
+BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := q
 
 #VBMETA_SYSTEM
 #BOARD_AVB_VBMETA_SYSTEM := system
