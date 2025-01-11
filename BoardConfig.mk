@@ -27,9 +27,6 @@ BOARD_USES_RECOVERY_AS_BOOT := false
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/prebuilt/etc/fstab.qcom
 BOARD_EXCLUDE_KERNEL_FROM_RECOVERY_IMAGE := true
 
-BOARD_RECOVERY_KERNEL_MODULES := $(wildcard $(DEVICE_PATH)/prebuilt/$(STOCK_KERNEL_ZUI_VER)/lib/modules/*.ko)
-BOARD_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/prebuilt/$(STOCK_KERNEL_ZUI_VER)/lib/modules/modules.load) )
-
 # vendor_boot
 #BOARD_INCLUDE_RECOVERY_RAMDISK_IN_VENDOR_BOOT := true
 BOARD_MOVE_GSI_AVB_KEYS_TO_VENDOR_BOOT := true
@@ -98,6 +95,11 @@ BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/p
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_BLOCKLIST_FILE := $(DEVICE_PATH)/prebuilt/$(STOCK_KERNEL_ZUI_VER)/lib/modules/modules.blocklist
 BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/prebuilt/$(STOCK_KERNEL_ZUI_VER)/lib/modules/modules.load.recovery))
 BOOT_KERNEL_MODULES := $(strip $(shell cat $(DEVICE_PATH)/prebuilt/$(STOCK_KERNEL_ZUI_VER)/lib/modules/modules.load) )
+
+##for recovery
+BOARD_RECOVERY_KERNEL_MODULES := $(wildcard $(DEVICE_PATH)/prebuilt/$(STOCK_KERNEL_ZUI_VER)/lib/modules/*.ko)
+BOARD_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/prebuilt/$(STOCK_KERNEL_ZUI_VER)/lib/modules/modules.load) )
+
 
 
 # partition controll
