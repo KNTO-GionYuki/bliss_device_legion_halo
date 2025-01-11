@@ -63,11 +63,17 @@ BOARD_BOOTIMG_HEADER_VERSION := 4
 TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/$(STOCK_KERNEL_ZUI_VER)/dtb
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
-BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive	\
+stack_depot_disable=on kasan.stacktrace=off kvm-arm.mode=protected cgroup_disable=pressure cgroup.memory=nokmem console=ttyMSM0,115200n8 loglevel=6 kpti=0 log_buf_len=256K kernel.panic_on_rcu_stall=1 swiotlb=noforce loop.max_part=7 cgroup.memory=nokmem,nosocket pcie_ports=compat msm_rtb.filter=0x237 allow_mismatched_32bit_el0 kasan=off rcupdate.rcu_expedited=1 rcu_nocbs=0-7 ftrace_dump_on_oops pstore.compress=none cpufreq.default_governor=performance can.stats_timer=0 fsa4480_i2c.async_probe=1 slub_debug=- disable_dma32=on video=vfb:640x400,bpp=32,memsize=3072000 bootconfig buildvariant=user  msm_drm.dsi_display0=qcom,mdss_dsi_nova_nt37701a_dsc_cmd: rootwait ro init=/init
+
+
 BOARD_KERNEL_CMDLINE +=	\
 	androidboot.hardware=qcom			\
 	androidboot.boot_devices=soc/1d84000.ufshc	\
-	androidboot.usbcontroller=a600000.dwc3
+	androidboot.usbcontroller=a600000.dwc3		\
+	androidboot.bootdevice = "1d84000.ufshc"	\
+	androidboot.dtbo_idx = "14"			\
+	androidboot.dtb_idx = "1"			\
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_IMAGE_NAME := Image
@@ -83,6 +89,8 @@ TARGET_NEEDS_DTBOIMAGE := true
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(wildcard $(DEVICE_PATH)/prebuilt/$(STOCK_KERNEL_ZUI_VER)/lib/modules/*.ko)
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(DEVICE_PATH)/prebuilt/$(STOCK_KERNEL_ZUI_VER)/lib/modules/modules.load
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_BLOCKLIST_FILE := $(DEVICE_PATH)/prebuilt/$(STOCK_KERNEL_ZUI_VER)/lib/modules/modules.blocklist
+BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(DEVICE_PATH)/prebuilt/$(STOCK_KERNEL_ZUI_VER)/lib/modules/modules.load.recovery
+BOOT_KERNEL_MODULES := $(DEVICE_PATH)/prebuilt/$(STOCK_KERNEL_ZUI_VER)/lib/modules/modules.load
 
 # partition controll
 BOARD_FLASH_BLOCK_SIZE := 0x4000
