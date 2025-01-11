@@ -33,7 +33,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
 
 
 #Bootcontrol
-PRODUCT_PACKAGES += \
-    android.hardware.boot@1.2-impl-qti \
-    android.hardware.boot@1.2-impl-qti.recovery \
-    android.hardware.boot@1.2-service
+PRODUCT_PACKAGES +=					\
+	android.hardware.boot@1.2-impl-qti		\
+	android.hardware.boot@1.2-impl-qti.recovery	\
+	android.hardware.boot@1.2-service
+
+# Health
+PRODUCT_PACKAGES +=					\
+	android.hardware.health-service.qti		\
+	android.hardware.health-service.qti_recovery
+
+PRODUCT_PACKAGES +=	\
+	init.qcom.recovery.rc
