@@ -65,7 +65,9 @@ BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
 BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive		\
 	androidboot.boot_devices=soc/1d84000.ufshc		\
 	androidboot.usbcontroller=a600000.dwc3			\
-	androidboot.hardware=qcom
+	androidboot.hardware=qcom				\
+	kasan=off						\
+	loop.max_part=8
 BOARD_BOOTCONFIG +=					\
 	androidboot.boot_devices=soc/1d84000.ufshc	\
 	androidboot.selinux=permissive			\
