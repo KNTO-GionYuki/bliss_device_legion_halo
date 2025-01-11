@@ -67,7 +67,10 @@ BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive		\
 	androidboot.usbcontroller=a600000.dwc3			\
 	androidboot.hardware=qcom				\
 	kasan=off						\
-	loop.max_part=8
+	loop.max_part=8						\
+	video=vfb:640x400					\
+	bpp=32							\
+	memsize=3072000
 BOARD_BOOTCONFIG +=					\
 	androidboot.boot_devices=soc/1d84000.ufshc	\
 	androidboot.selinux=permissive			\
