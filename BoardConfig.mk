@@ -57,13 +57,15 @@ BOARD_USES_QCOM_MERGE_DTBS_SCRIPT := true
 TARGET_NO_KERNEL := false
 BOARD_BOOT_HEADER_VERSION := 4
 STOCK_KERNEL_ZUI_VER := 14.0.697
-KERNEL_VARIANT := 14.0.697
+KERNEL_VARIANT := ksu
 BOARD_BOOTIMG_HEADER_VERSION := 4
 TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/$(STOCK_KERNEL_ZUI_VER)/dtb
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
 BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive		\
-	androidboot.boot_devices=soc/1d84000.ufshc
+	androidboot.boot_devices=soc/1d84000.ufshc		\
+	androidboot.usbcontroller=a600000.dwc3			\
+	androidboot.hardware=qcom
 BOARD_BOOTCONFIG +=					\
 	androidboot.boot_devices=soc/1d84000.ufshc	\
 	androidboot.selinux=permissive			\
