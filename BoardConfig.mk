@@ -59,7 +59,7 @@ BOARD_USES_QCOM_MERGE_DTBS_SCRIPT := true
 #TARGET_NO_KERNEL := false
 ##for use kernel header begin
 TARGET_KERNEL_CONFIG := halo_defconfig
-TARGET_KERNEL_SOURCE := kernel/lenovo/halo
+TARGET_KERNEL_SOURCE := kernel/legion/halo
 ##for use kernel header end
 BOARD_BOOT_HEADER_VERSION := 4
 STOCK_KERNEL_ZUI_VER := 14.0.697
