@@ -19,7 +19,7 @@ PRODUCT_SHIPPING_API_LEVEL := 32
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-impl-qti \
     android.hardware.boot@1.2-impl-qtl.recovery \
     android.hardware.boot@1.2-service
