@@ -16,8 +16,8 @@ AB_OTA_PARTITIONS +=	\
 	vendor		\
 	vendor_dlkm	\
 	vendor_boot	\
-	vbmeta
-#	vbmeta_system
+	vbmeta		\
+	vbmeta_system
 
 # recovery
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
@@ -43,6 +43,11 @@ TARGET_CPU_VARIANT_RUNTIME := kryo300
 # bootloader
 TARGET_BOOTLOADER_BOARD_NAME := taro
 TARGET_NO_BOOTLOADER := true
+
+#bootctl
+SOONG_CONFIG_NAMESPACES += ufsbsg
+SOONG_CONFIG_ufsbsg += ufsframework
+SOONG_CONFIG_ufsbsg_ufsframework := bsg
 
 #platform infomation
 TARGET_BOARD_PLATFORM := taro
