@@ -56,6 +56,7 @@ TARGET_SCREEN_DENSITY := 480
 
 # android kernel
 BOARD_USES_QCOM_MERGE_DTBS_SCRIPT := true
+TARGET_FORCE_PREBUILT_KERNEL := true
 #TARGET_NO_KERNEL := false
 ##for use kernel header begin
 TARGET_KERNEL_CONFIG := halo_defconfig
