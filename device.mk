@@ -56,6 +56,9 @@ PRODUCT_PACKAGES +=					\
 PRODUCT_PACKAGES +=	\
 	init.recovery.qcom.rc
 
+##for kernel dtb image
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/prebuilt/$(STOCK_KERNEL_ZUI_VER)/dtb:$(PRODUCT_OUT)/dtb.img
 
 ##init 1st vendor_ramdisk
 #PRODUCT_PACKAGES +=			\
