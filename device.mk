@@ -71,4 +71,5 @@ PRODUCT_COPY_FILES += \
     tune2fs.vendor_ramdisk
 
 PRODUCT_BOOT_JARS += \
-    WfdCommon
+	WfdCommon		\
+	telephony-ext
