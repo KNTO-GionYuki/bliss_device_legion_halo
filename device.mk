@@ -1,4 +1,5 @@
 STOCK_KERNEL_ZUI_VER := 14.0.697
+DEVICE_PATH := device/legion/halo
 # include halo vendor blobs
 $(call inherit-product, vendor/legion/halo/halo-vendor.mk)
 # inherit GSI key
