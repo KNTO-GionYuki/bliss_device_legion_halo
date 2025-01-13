@@ -30,8 +30,8 @@ PRODUCT_PACKAGES +=	\
 
 #Initialization
 PRODUCT_PACKAGES += 	\
-	fstab.default	\
-	fstab.default.vendor_ramdisk
+	fstab.qcom	\
+	fstab.qcom.vendor_ramdisk
 
 PRODUCT_COPY_FILES +=	\
 	$(LOCAL_PATH)/prebuilt/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom			\

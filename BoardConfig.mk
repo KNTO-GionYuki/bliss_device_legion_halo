@@ -70,7 +70,6 @@ TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/$(STOCK_KERNEL_ZUI_VER)/dtb
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
 BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive		\
-	androidboot.boot_devices=soc/1d84000.ufshc		\
 	androidboot.usbcontroller=a600000.dwc3			\
 	androidboot.hardware=qcom				\
 	kasan=off						\
@@ -79,7 +78,6 @@ BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive		\
 	bpp=32							\
 	memsize=3072000
 BOARD_BOOTCONFIG +=					\
-	androidboot.boot_devices=soc/1d84000.ufshc	\
 	androidboot.selinux=permissive			\
 	androidboot.hardware=qcom			\
 	androidboot.memcg=1				\
@@ -91,7 +89,7 @@ BOARD_USES_GENERIC_KERNEL_IMAGE := true
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/$(KERNEL_VARIANT)/Image
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/$(STOCK_KERNEL_ZUI_VER)/dtbo.img
 BOARD_RAMDISK_USE_LZ4 := true
-#BOARD_INCLUDE_DTB_IN_BOOTIMG := true
+BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 TARGET_NEEDS_DTBOIMAGE := true
 
 
