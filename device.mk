@@ -6,8 +6,8 @@ $(call inherit-product, vendor/legion/halo/halo-vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
 # A/B update
-$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
-#$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
+#$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # APEX
@@ -69,3 +69,6 @@ PRODUCT_COPY_FILES += \
     adbd.vendor_ramdisk			\
     resize2fs.vendor_ramdisk		\
     tune2fs.vendor_ramdisk
+
+PRODUCT_BOOT_JARS += \
+    WfdCommon
