@@ -1,3 +1,4 @@
+STOCK_KERNEL_ZUI_VER := 14.0.697
 # include halo vendor blobs
 $(call inherit-product, vendor/legion/halo/halo-vendor.mk)
 # inherit GSI key
