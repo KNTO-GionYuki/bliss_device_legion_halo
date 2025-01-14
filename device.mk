@@ -1,5 +1,8 @@
 STOCK_KERNEL_ZUI_VER := 14.0.697
 DEVICE_PATH := device/legion/halo
+#Android base configs
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # include halo vendor blobs
 $(call inherit-product, vendor/legion/halo/halo-vendor.mk)
 # inherit GSI key
@@ -10,8 +13,16 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# AAPT
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+
 # APEX
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+
+#dalvik (ART)
+# Setup dalvik vm configs
+$(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # first lunch Android API
 PRODUCT_SHIPPING_API_LEVEL := 32
@@ -69,6 +80,10 @@ PRODUCT_COPY_FILES += \
     adbd.vendor_ramdisk			\
     resize2fs.vendor_ramdisk		\
     tune2fs.vendor_ramdisk
+# Verified Boot
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml
+
 
 PRODUCT_BOOT_JARS += \
 	WfdCommon		\
