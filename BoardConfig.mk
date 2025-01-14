@@ -152,6 +152,11 @@ TARGET_USES_PREBUILT_VENDOR_SEPOLICY := false
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 SELINUX_IGNORE_NEVERALLOWS := false
 
+#Security
+BOOT_SECURITY_PATCH := 2023-11-01
+VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
+
+
 ##metadata partition
 BOARD_USES_METADATA_PARTITION := true
 
